@@ -10,4 +10,44 @@
     height: 78px;
     background-color: var(--soft-pink);
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
+}
+.cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 327px;
+    height: 248px;
+    background-color: var(--purple-letter);
+    border-radius: 8px;
+    margin: 16px 0;
+    
+
+    &__image{
+     border-radius: 100px;
+    }
+
+    &__text{
+        width: 263px;
+        color: white;
+        font-family: "Outfit", sans-serif;
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 22px;
+        letter-spacing: -0.3px;
+        margin-inline: auto;
+    }
+    &__user--photo{
+        width: 40px;
+        height: 40px;
+        
+    }
+
 }
