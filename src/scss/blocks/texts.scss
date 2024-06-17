@@ -1,1 +1,19 @@
+.text-head{
+    font-family: "League Spartan", sans-serif;
+    font-size: 19px;
+    font-weight: 500;
+    color: var(--soft-purple);
+    text-align: center;
+    line-height: 25px;
+    letter-spacing: -0.63px;
+}
 
+.text_box_star{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "League Spartan", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--purple-letter);
+}
