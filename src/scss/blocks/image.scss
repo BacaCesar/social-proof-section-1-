@@ -1,5 +1,21 @@
-.stars{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@use '../mixins/hover.scss' as *;
+.stars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.star-1,
+.star-2,
+.star-3,
+.star-4,
+.star-5 {
+  & > * {
+    transition: translate 0.3s ease-in-out;
+  }
+
+  @include hover {
+    & > * {
+      translate: 0 -20px;
+    }
+  }
 }

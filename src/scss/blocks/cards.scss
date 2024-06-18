@@ -1,53 +1,110 @@
-.boxes-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 16px;
-}
+@use '../mixins/resposive.scss' as *;
+@use '../mixins/hover.scss' as *;
 
-.box-with-star{
-    width: 327px;
-    height: 78px;
-    background-color: var(--soft-pink);
-    border-radius: 8px;
+.boxes {
+  @include responsive(desktop) {
+    width: 540px;
+    height: 200px;
+    background-color: red;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap:15px;
+  }
 }
-.cards{
+.boxes-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+.box-with-star {
+  width: 327px;
+  height: 78px;
+  background-color: var(--soft-pink);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  @include responsive(desktop) {
+    height: 56px;
+    width: 445px;
+  }
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include responsive(desktop) {
+    height: 266px;
+    width: 1110px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 71px;
+  }
+}
+.card {
+  width: 327px;
+  height: 248px;
+  background-color: var(--purple-letter);
+  border-radius: 8px;
+  margin: 16px 0;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    margin-inline: 32px;
+    gap: 32px;
+    margin-top: 40px;
+  }
+  &__info--profile {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+  }
+  &__name--profile {
+    color: white;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+  }
+  &__verified--profile {
+    color: var(--pink);
+    font-family: 'League Spartan', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+  }
+
+  &__image {
+    border-radius: 100px;
+  }
+
+  &__text {
+    width: 263px;
+    color: white;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: -0.3px;
+    margin-inline: auto;
+  }
+  &__user--photo {
+    width: 40px;
+    height: 40px;
+  }
 }
-.card{
-    width: 327px;
-    height: 248px;
-    background-color: var(--purple-letter);
-    border-radius: 8px;
-    margin: 16px 0;
-    
-
-    &__image{
-     border-radius: 100px;
-    }
-
-    &__text{
-        width: 263px;
-        color: white;
-        font-family: "Outfit", sans-serif;
-        font-size: 17px;
-        font-weight: 500;
-        line-height: 22px;
-        letter-spacing: -0.3px;
-        margin-inline: auto;
-    }
-    &__user--photo{
-        width: 40px;
-        height: 40px;
-        
-    }
-
+.info-container {
+  @include responsive(desktop) {
+    width: 1110px;
+    height: 245px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
